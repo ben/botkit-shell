@@ -1,0 +1,22 @@
+{
+  "name": "botkit-shell",
+  "version": "0.1.0",
+  "description": "Shell adapter for Botkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben/botkit-shell.git"
+  },
+  "keywords": [
+    "botkit"
+  ],
+  "author": "Ben Straub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ben/botkit-shell/issues"
+  },
+  "homepage": "https://github.com/ben/botkit-shell#readme"
+}
