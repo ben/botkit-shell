@@ -1,3 +1,4 @@
+'use strict';
 let core = require('botkit').core
 let Path = require('path')
 let request = require('request')
