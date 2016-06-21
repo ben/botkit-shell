@@ -1,4 +1,4 @@
-let { core } = require('botkit')
+let core = require('botkit').core
 let Path = require('path')
 let request = require('request')
 let express = require('express')
