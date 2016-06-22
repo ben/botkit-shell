@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/ben/botkit-shell/issues"
   },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "homepage": "https://github.com/ben/botkit-shell#readme",
   "dependencies": {
     "ansi": "^0.3.1",
