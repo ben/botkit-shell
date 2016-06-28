@@ -113,7 +113,7 @@ function worker (botkit, config) {
     */
     cursor.horizontalAbsolute(0).eraseLine()
     if (message.attachments || message.icon_emoji || message.username || message.icon_url) {
-      console.log(JSON.stringify(message, null, 2))
+      console.log(chalk.blue(JSON.stringify(message, null, 2)))
     } else {
       console.log(chalk.blue(message.text))
     }
@@ -322,12 +322,8 @@ function worker (botkit, config) {
     cb()
   }
 
-  if (bot.config.incoming_webhook) {
-    bot.configureIncomingWebhook(config.incoming_webhook)
-  }
-
-  if (bot.config.bot) {
-    bot.configureRTM(config.bot)
+  bot.res = {
+    json: (obj) => { console.log(chalk.blue(JSON.stringify(obj, null, 2))) }
   }
 
   return bot
