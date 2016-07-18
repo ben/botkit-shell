@@ -1,4 +1,5 @@
-let { core } = require('botkit')
+'use strict';
+let core = require('botkit').core
 let Path = require('path')
 let request = require('request')
 let express = require('express')
@@ -351,11 +352,11 @@ module.exports = function Shellbot (configuration) {
     if (msg.channel === 'DM') {
       evt = 'direct_message'
     } else {
-      if (/^@bot/i.test(msg.text)) {
-        msg.text = msg.text.replace(/^@bot:?\s*/i, '')
+      if (RegExp(`^@${bot.identity.name}`, 'i').test(msg.text)) {
+        msg.text = msg.text.replace(RegExp(`^@${bot.identity.name}:?\\s*`, 'i'), '')
         console.log(chalk.red(msg.text))
         evt = 'direct_mention'
-      } else if (/@bot/i.test(msg.text)) {
+      } else if (RegExp(`@${bot.identity.name}`, 'i').test(msg.text)) {
         evt = 'mention'
       } else evt = 'ambient'
     }
