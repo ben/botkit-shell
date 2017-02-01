@@ -245,6 +245,20 @@ function worker (botkit, config) {
     bot.say(msg, cb)
   }
 
+  bot.replyInThread = function (src, resp, cb) {
+    var msg = {}
+
+    if (typeof resp === 'string') {
+      msg.text = resp
+    } else {
+      msg = resp
+    }
+
+    msg.channel = src.channel
+
+    bot.say(msg, cb)
+  }
+
   /**
   * sends a typing message to the source channel
   *
