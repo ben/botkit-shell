@@ -1,6 +1,6 @@
 {
   "name": "botkit-shell",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shell adapter for Botkit",
   "main": "index.js",
   "scripts": {
