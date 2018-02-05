@@ -37,7 +37,9 @@ function worker (botkit, config) {
   cl.command('*', (input) => {
     botkit.debug(`GOT '${input}'`)
     botkit.receiveMessage(bot, {
-      type: 'message',
+      event: {
+        type: 'message',
+      },
       channel: channel,
       user: 'SHELLUSER',
       text: input,
